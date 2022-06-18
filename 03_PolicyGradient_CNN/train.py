@@ -77,9 +77,6 @@ def eval_episode(agent, env, render=False):
 
 def show(agent, env):
     import cv2
-    from VedioWriter import Recoder
-
-    vw = Recoder(to_path='./process.avi')
 
     obs = env.reset()
     episode_reward = 0
@@ -91,12 +88,10 @@ def show(agent, env):
         episode_reward += reward
 
         frame = env.render(mode='rgb_array')
-        vw.write(frame)
         cv2.imshow('Pong', frame)
         cv2.waitKey(1)
 
         if done:
-            vw.close()
             cv2.destroyAllWindows()
             env.close()
             print(done, episode_reward)
