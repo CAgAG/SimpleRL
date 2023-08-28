@@ -1,4 +1,4 @@
-## PyTorch(1.10) implementation of simple single agent reinforcement learning
+## PyTorch implementation of simple single agent reinforcement learning
 
 ### 01 Base
 
